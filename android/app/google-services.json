@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "257160447622",
+    "project_id": "my-very-cool-notes-app",
+    "storage_bucket": "my-very-cool-notes-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257160447622:android:43c88ca6c2217797647307",
+        "android_client_info": {
+          "package_name": "za.co.learningflutter.mynotes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTTlgz2SVnQ5UYxbbNJ8ZTzVrUZ_zBntk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
