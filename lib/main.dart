@@ -9,13 +9,16 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(
     MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const HomePage(),
-    ),
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        home: const HomePage(),
+        routes: {
+          "/login/": (context) => const LoginView(),
+          "/register/": (context) => const RegisterView(),
+        }),
   );
 }
 
@@ -43,9 +46,9 @@ class HomePage extends StatelessWidget {
               // } else {
               //   return const VerifyEmailView();
               // }
-              return LoginView();
+              return const LoginView();
             default:
-              return const Text('Loading...');
+              return const CircularProgressIndicator();
           }
         },
       ),
@@ -53,27 +56,3 @@ class HomePage extends StatelessWidget {
   }
 }
 
-class VerifyEmailView extends StatefulWidget {
-  const VerifyEmailView({super.key});
-
-  @override
-  State<VerifyEmailView> createState() => _VerifiedEmailViewState();
-}
-
-class _VerifiedEmailViewState extends State<VerifyEmailView> {
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const Text("Please verify your email address:"),
-        TextButton(
-          onPressed: () async {
-            final user = FirebaseAuth.instance.currentUser;
-            await user?.sendEmailVerification();
-          },
-          child: const Text("Send Email Verification"),
-        )
-      ],
-    );
-  }
-}
