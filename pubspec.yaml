@@ -53,6 +53,7 @@ dev_dependencies:
   # Other dependencies...
   # Add the dart:js dependency here
   js: ^0.6.3
+  test: ^1.24.9
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
