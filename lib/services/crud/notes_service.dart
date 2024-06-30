@@ -288,12 +288,14 @@ class DatabaseNote {
   final int userId;
   final String text;
   final bool isSyncedWithCloud;
+
   DatabaseNote({
     required this.id,
     required this.userId,
     required this.text,
     required this.isSyncedWithCloud,
   });
+  
   DatabaseNote.fromRow(Map<String, Object?> map)
       : id = map[idColumn] as int,
         userId = map[userIdColumn] as int,
